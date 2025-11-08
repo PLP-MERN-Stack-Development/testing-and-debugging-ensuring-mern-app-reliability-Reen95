@@ -1,0 +1,13 @@
+{
+  "name": "mern-testing",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "test": "npm run -w server test && npm run -w client test",
+    "coverage": "npm run -w server coverage && npm run -w client coverage"
+  }
+}
