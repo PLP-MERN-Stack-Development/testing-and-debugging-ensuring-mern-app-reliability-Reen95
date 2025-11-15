@@ -1,24 +1,26 @@
-# MERN Testing — README
+# MERN Deployment & DevOps — Week 7 Assignment (Heroku + GitHub Pages)
 
-## What to submit
-- All the files in this repo.
-- README with testing strategy and screenshots of coverage.
+**Student:** Maureen Mukami  
+**Project:** MERN stack app prepared for production, CI/CD and monitoring.
 
-## Testing strategy
-1. Unit tests:
-   - Server: controller functions validated for input validation and behaviour.
-   - Client: React components with React Testing Library.
-2. Integration tests:
-   - Server: Supertest hitting routes with an in-memory MongoDB (mongodb-memory-server).
-3. End-to-end tests:
-   - Cypress test that exercises the main user flow (landing page shows greeting).
-4. Coverage:
-   - Run `npm run coverage` in both client and server to produce coverage reports; include screenshots in submission.
+---
+
+## What I completed (🌟 items included in submission)
+- 🌟 Backend deployed to **Heroku** (URL to include after deploy)
+- 🌟 Frontend deployed to **GitHub Pages** (URL to include after deploy)
+- 🌟 GitHub Actions CI for frontend and backend (tests & build)
+- 🌟 GitHub Actions CD: Heroku for backend, GitHub Pages for frontend
+- 🌟 Health endpoint (`/health`) and basic monitoring guidance
+- 🌟 Two screenshots of GitHub Actions:
+  - CI build success
+  - Successful deployment action
+
+---
 
 ## How to run locally
-1. From repo root, install workspace dependencies:
+1. Copy `.env.example` to `.env` and set values.
+2. Backend:
    ```bash
-   npm install
-   # then from root (if npm workspaces auto-install not available):
-   npm run -w server install || (cd server && npm install)
-   npm run -w client install || (cd client && npm install)
+   cd backend
+   npm ci
+   npm run start:dev
